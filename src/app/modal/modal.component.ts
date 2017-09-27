@@ -14,7 +14,7 @@
   export class ModalComponent {
   
     public visible = false;
-    private visibleAnimate = false;
+    public visibleAnimate = false;
   
     constructor(){}
   
