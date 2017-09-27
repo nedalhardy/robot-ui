@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- '6'
+before_install:
+- npm install -g @angular/cli
+install: npm install
+branches:
+  only:
+  - master
+deploy:
+  provider: heroku
+  api_key:
+    secure: k22Zfdeffna4rYSYyF1QFluO+5dCt2AmQ5BVQ3Ga9QKsUxXNG1DlPhb2CPJFtRv3hwoi6crQ5IlHVa5gTOasywQ9u2z9IrBpMT+0x1R1CxbCz2P+E7H+zcouAD70oC5DQwY+eddy7C026iELYCURffGXgVlmsxgNIrzWtfGNrpSCRX1PCKOTjSO2HV8/IgjvKI/cSCvRirLL7TG+WHwtSTNuw31UTAtlKsMxCnRXMKyIK1oMIHxmjYDw8U5x913SgL1KWBt4IqEs5mwaONgfR1A2uXLDFqYXXLXHL/xhyKJqR0xqFoD4mPH9nvljrkcLc5+76p7XXl9vhlXzPwS77FFzALXcPmhJsr/HDFpY49DdA/xa1buLEH0+3B6eHn8aQq3mZ6mYrvaC6b+Wd+sPHmCt9yY2aVMIyi8YjNDJNBCfcIIhM27AXrZxvmloANypp0GVB+VNtBY1wfeq/pJ0b1Cr7dNyYjRlpzQzTarKK0GNhb4HrR/1goXfxHiJVypZXKfXd/et249v07WJFvJz3v1ACwYAei6WXxrstDBjLZbHOR1DrMREqHfRJ2OlgCBoFw91kygEK774Dw4+c3Ux1mgS27Xzp6oYpYH+29k1FLMGkBU56VRwnwyQx7cL5pNelv+VGvkm68fvPnpZ1H1wzTmjoFUAtKnaTozn666jSgQ=
+  app: robot-ui1
