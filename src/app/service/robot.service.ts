@@ -7,7 +7,7 @@ import { Robot } from '../model/robot';
 
 @Injectable()
 export class RobotService {
-    url: string = "http://localhost:8080/robot";
+    url: string = "https://robot-api1.herokuapp.com/robot";
     constructor(
         private http: Http,
         private authenticationService: AuthenticationService) {
