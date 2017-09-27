@@ -1,0 +1,42 @@
+<p class="logout"><a [routerLink]="['/login']"><span class="glyphicon glyphicon-log-out"></span>Log-out</a></p>
+<div class="col-md-6" class="robots">
+  <table class="table table-hover">
+    <thead class="thead-inverse">
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let robot of robots">
+        <th scope="row">{{robot.id}}</th>
+        <td>{{robot.name}}</td>
+        <td>{{robot.description}}</td>
+        <td><span *ngIf="writing" class="glyphicon glyphicon-remove" (click)="delete(robot.id)" style="color:red;cursor:pointer"></span></td>        
+      </tr>
+    </tbody>
+  </table>
+</div>
+<button type="button" class="btn btn-primary addRobot" *ngIf="writing" (click)="modal1.show()">
+  <span class="glyphicon glyphicon-plus"></span> Add
+</button>
+<app-modal #modal1>
+  <div class="app-modal-header">
+    Create new Robot
+  </div>
+  <div class="app-modal-body">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter Name" [(ngModel)]="model.name">
+    </div>
+    <div class="form-group">
+      <label for="Description">Description</label>
+      <textarea class="form-control" id="Description" placeholder="Enter Description" [(ngModel)]="model.description"></textarea>
+    </div>
+  </div>
+  <div class="app-modal-footer">
+    <button type="button" class="btn btn-default" (click)="modal1.hide()">Close</button>
+    <button type="button" class="btn btn-primary" (click)="save()">Create</button>
+  </div>
+</app-modal>

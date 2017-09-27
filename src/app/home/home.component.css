@@ -1,0 +1,13 @@
+.robots {
+    margin-top: 30%;
+    border: 2px solid #d6d8ff;
+    padding: 10px;
+    border-radius: 5px;
+}
+.logout {
+    float: right;
+    margin-top:5%;
+}
+.addRobot {
+    margin-top: 3%;
+}
