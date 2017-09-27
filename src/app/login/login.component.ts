@@ -31,11 +31,13 @@ export class LoginComponent implements OnInit {
                 if (result === true) {
                     this.router.navigate(['/']);
                 } else {
+					console.log(result);                    
                     this.error = 'Username or password is incorrect';
                     this.loading = false;
                 }
             },
             error => {
+				console.log(error);                    
                 this.error = 'Username or password is incorrect';
                 this.loading = false;
             }
